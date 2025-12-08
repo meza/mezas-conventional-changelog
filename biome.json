@@ -1,0 +1,33 @@
+{
+  "extends": ["@meza/biome"],
+  "files": {
+    "includes": ["**", "!**/reports", "!**/.cache", "!**/dist", "!**/node_modules"]
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.test.ts"],
+      "linter": {
+        "rules": {
+          "nursery": {},
+          "suspicious": { "noTemplateCurlyInString": "off" }
+        }
+      }
+    }
+  ],
+  "linter": {
+    "rules": {
+      "style": {
+        "noParameterAssign": "error",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "noUnusedTemplateLiteral": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error",
+        "noUselessElse": "error"
+      }
+    }
+  }
+}

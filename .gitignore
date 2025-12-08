@@ -1,0 +1,8 @@
+.idea
+node_modules
+bob-memory.md
+pnpm-workspace.yaml
+*.tsbuildinfo
+.cache
+dist
+reports
