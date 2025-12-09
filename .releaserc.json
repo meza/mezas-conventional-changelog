@@ -19,14 +19,14 @@
     [
       "@semantic-release/commit-analyzer",
       {
-        "config": "./dist/index.cjs"
+        "config": "./dist/index.js"
       }
     ],
     "semantic-release-export-data",
     [
       "@semantic-release/release-notes-generator",
       {
-        "config": "./dist/index.cjs"
+        "config": "./dist/index.js"
       }
     ],
     "@semantic-release/npm",
