@@ -5,6 +5,9 @@
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "repository": {
+    "url": "https://github.com/meza/mezas-conventional-changelog"
+  },
   "exports": {
     ".": {
       "import": {
