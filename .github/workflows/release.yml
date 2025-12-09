@@ -22,7 +22,10 @@ jobs:
       - name: 📝 Set up node
         uses: meza/action-setup-node-pnpm@main
         with:
-          install: true
+          install: false
+
+      - name: 📦 Install Dependencies
+        run: pnpm install --prefer-offline --frozen-lockfile
 
       - name: 🔬 Lint
         run: pnpm lint:ci
