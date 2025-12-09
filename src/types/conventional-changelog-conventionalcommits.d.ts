@@ -11,11 +11,23 @@ declare module 'conventional-changelog-conventionalcommits' {
     [key: string]: unknown;
   }
 
+  export interface ConventionalCommit {
+    type?: string | null;
+    [key: string]: unknown;
+  }
+
+  export interface ConventionalRecommendedBump {
+    level: number;
+    reason: string;
+  }
+
+  export type WhatBump = (commits?: ReadonlyArray<ConventionalCommit>) => ConventionalRecommendedBump | null;
+
   export interface ConventionalCommitsPreset {
     commits?: Record<string, unknown>;
     parser?: Record<string, unknown>;
     writer?: Record<string, unknown>;
-    whatBump?: Record<string, unknown>;
+    whatBump?: WhatBump;
   }
 
   export const DEFAULT_COMMIT_TYPES: ReadonlyArray<ConventionalCommitType>;

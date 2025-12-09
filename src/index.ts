@@ -1,4 +1,5 @@
 import type {
+  ConventionalCommitsPreset,
   ConventionalCommitsPresetConfig,
   ConventionalCommitType
 } from 'conventional-changelog-conventionalcommits';
@@ -19,14 +20,47 @@ export const DEFAULT_COMMIT_TYPES: ReadonlyArray<CommitType> = Object.freeze([
   dependencyCommitType
 ]);
 
+const dependencyBumpReason = 'Dependency updates were included in this release.';
+
 export default async function createPreset(config?: ConventionalCommitsPresetConfig) {
+  const resolvedConfig = resolveConfig(config);
+  const preset = await conventionalCommitsPreset(resolvedConfig);
+
+  const upstreamWhatBump = preset.whatBump as NonNullable<ConventionalCommitsPreset['whatBump']>;
+  preset.whatBump = function dependencyAwareWhatBump(this: unknown, commits) {
+    const normalizedCommits = Array.isArray(commits) ? commits : [];
+    const baseResult = upstreamWhatBump.call(this, normalizedCommits);
+
+    if (baseResult) {
+      return baseResult;
+    }
+
+    if (hasDependencyCommit(normalizedCommits)) {
+      return { level: 2, reason: dependencyBumpReason };
+    }
+
+    return baseResult;
+  } satisfies ConventionalCommitsPreset['whatBump'];
+
+  return preset;
+}
+
+function resolveConfig(config?: ConventionalCommitsPresetConfig) {
   if (!config) {
-    return conventionalCommitsPreset({ types: DEFAULT_COMMIT_TYPES });
+    return { types: DEFAULT_COMMIT_TYPES } satisfies ConventionalCommitsPresetConfig;
   }
 
-  if (config && Array.isArray(config.types)) {
-    return conventionalCommitsPreset(config);
+  if (Array.isArray(config.types)) {
+    return config;
   }
 
-  return conventionalCommitsPreset({ ...config, types: DEFAULT_COMMIT_TYPES });
+  return { ...config, types: DEFAULT_COMMIT_TYPES } satisfies ConventionalCommitsPresetConfig;
+}
+
+type ConventionalCommit = {
+  type?: string | null;
+};
+
+function hasDependencyCommit(commits: ReadonlyArray<ConventionalCommit>) {
+  return commits.some((commit) => commit?.type === dependencyCommitType.type);
 }
