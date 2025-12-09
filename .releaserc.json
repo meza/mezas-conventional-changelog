@@ -19,14 +19,14 @@
     [
       "@semantic-release/commit-analyzer",
       {
-        "preset": "conventionalcommits"
+        "preset": "./dist/index.cjs"
       }
     ],
     "semantic-release-export-data",
     [
       "@semantic-release/release-notes-generator",
       {
-        "preset": "conventionalcommits"
+        "preset": "./dist/index.cjs"
       }
     ],
     "@semantic-release/npm",
