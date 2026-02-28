@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  mezas-conventional-changelog: link:C:/Users/meza/AppData/Local/pnpm/global/5/node_modules/@meza/mezas-conventional-changelog
-
 importers:
 
   .:
