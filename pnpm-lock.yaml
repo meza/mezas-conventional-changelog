@@ -43,7 +43,7 @@ importers:
         specifier: 14.1.0
         version: 14.1.0(semantic-release@25.0.2(typescript@5.9.3))
       '@types/node':
-        specifier: ^24.10.1
+        specifier: ^24.10.2
         version: 24.10.2
       '@typescript/native-preview':
         specifier: 7.0.0-dev.20251209.1
