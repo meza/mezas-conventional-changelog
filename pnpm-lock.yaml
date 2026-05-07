@@ -49,7 +49,7 @@ importers:
         specifier: 7.0.0-dev.20260430.1
         version: 7.0.0-dev.20260430.1
       '@vitest/coverage-v8':
-        specifier: ^4.0.15
+        specifier: 4.0.15
         version: 4.0.15(vitest@4.0.15(@types/node@24.12.0))
       is-ci:
         specifier: ^4.1.0
