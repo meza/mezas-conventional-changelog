@@ -58,7 +58,7 @@
     "@typescript/native-preview": "7.0.0-dev.20260430.1",
     "@vitest/coverage-v8": "^4.0.15",
     "is-ci": "^4.1.0",
-    "npm-run-all2": "^8.0.4",
+    "npm-run-all2": "^9.0.0",
     "pnpm": "^10.33.0",
     "publint": "^0.3.15",
     "semantic-release": "^25.0.2",
