@@ -41,12 +41,12 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "conventional-changelog-conventionalcommits": "^9.1.0"
+    "conventional-changelog-conventionalcommits": "9.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.8",
-    "@meza/biome": "^1.1.1",
-    "@meza/tsconfig-base": "^1.1.0",
+    "@biomejs/biome": "2.3.8",
+    "@meza/biome": "1.1.1",
+    "@meza/tsconfig-base": "1.1.0",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "13.0.1",
     "@semantic-release/exec": "7.1.0",
@@ -54,17 +54,17 @@
     "@semantic-release/github": "12.0.6",
     "@semantic-release/npm": "13.1.5",
     "@semantic-release/release-notes-generator": "14.1.0",
-    "@types/node": "^24.12.0",
+    "@types/node": "24.12.0",
     "@typescript/native-preview": "7.0.0-dev.20260430.1",
     "@vitest/coverage-v8": "^4.0.15",
-    "is-ci": "^4.1.0",
-    "npm-run-all2": "^8.0.4",
+    "is-ci": "4.1.0",
+    "npm-run-all2": "8.0.4",
     "pnpm": "^10.33.0",
-    "publint": "^0.3.15",
-    "semantic-release": "^25.0.2",
-    "semantic-release-export-data": "^1.2.0",
-    "tsup": "^8.5.1",
-    "typescript": "^6.0.2",
+    "publint": "0.3.15",
+    "semantic-release": "25.0.2",
+    "semantic-release-export-data": "1.2.0",
+    "tsup": "8.5.1",
+    "typescript": "6.0.2",
     "vitest": "^4.0.15"
   },
   "publishConfig": {
