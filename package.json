@@ -44,7 +44,7 @@
     "conventional-changelog-conventionalcommits": "^9.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.8",
+    "@biomejs/biome": "^2.5.2",
     "@meza/biome": "^1.1.1",
     "@meza/tsconfig-base": "^1.1.0",
     "@semantic-release/changelog": "6.0.3",
