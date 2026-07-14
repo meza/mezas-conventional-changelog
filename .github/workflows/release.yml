@@ -15,7 +15,7 @@ on:
 jobs:
   build:
     name: 🧪 Verify
-    runs-on: self-hosted
+    runs-on: meza-ubuntu-latest
     steps:
       - uses: actions/checkout@v6
 
