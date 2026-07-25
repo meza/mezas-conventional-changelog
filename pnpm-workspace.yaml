@@ -1,1 +1,4 @@
 minimumReleaseAge: 10080
+minimumReleaseAgeExclude:
+  # Renovate security update: pnpm@11.5.3
+  - pnpm@11.5.3
