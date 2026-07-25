@@ -17,10 +17,10 @@ jobs:
     name: 🧪 Verify
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
 
       - name: 📝 Set up node
-        uses: meza/action-setup-node-pnpm@main
+        uses: meza/action-setup-node-pnpm@a2f4240b2835ddfaeb13b353e996e93832b5f47c # main
         with:
           install: false
 
