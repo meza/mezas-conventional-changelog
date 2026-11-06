@@ -13,10 +13,10 @@ importers:
         version: 9.1.0
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.3.8
+        specifier: 2.3.8
         version: 2.3.8
       '@meza/biome':
-        specifier: ^1.1.1
+        specifier: 1.1.1
         version: 1.1.1
       '@meza/tsconfig-base':
         specifier: ^1.1.0
